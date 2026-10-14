@@ -1,3 +1,14 @@
 packages:
   - "packages/*"
   - "apps/*"
+
+# Reviewed audit exceptions. Each entry must say why it is safe and be
+# re-checked whenever Expo is upgraded. Never add anything that ships in the app.
+auditConfig:
+  ignoreGhsas:
+    # node-forge, via @expo/cli: build-time tool only, not bundled into the
+    # app; no patched version published.
+    - GHSA-86w9-cpqp-85rv
+    # braces, via Metro's file watcher: build-time only, inputs are our own
+    # file globs; no patched version published.
+    - GHSA-vfj7-8cjw-p6xm

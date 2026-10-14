@@ -23,7 +23,8 @@ read their health data**. That includes us.
 
 ```
 packages/core   data model, validation and all cryptography
-apps/           mobile app, sync server and clinician viewer (to come)
+apps/mobile     patient app (Expo / React Native), see apps/mobile/README.md
+apps/           sync server and clinician viewer (to come)
 ```
 
 ## Development
@@ -39,6 +40,7 @@ pnpm test
 1. **Core**: data model, record encryption, recovery, sharing. *(done)*
 2. **Mobile app (local-only)**: body map, pain entry, medication log,
    encrypted on-device storage, biometric lock, reminders with generic text.
+   *(first version done)*
 3. **Clinician viewer**: static page that opens share links, plus PDF export.
 4. **Server**: passkey accounts, encrypted sync, share storage with expiry,
    revocation and view counts, hosted in NZ.

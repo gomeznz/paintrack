@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "PainTrack",
+    "slug": "paintrack",
+    "scheme": "paintrack",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "nz.paintrack.app"
+    },
+    "android": {
+      "package": "nz.paintrack.app",
+      "allowBackup": false,
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-sqlite", { "useSQLCipher": true }],
+      ["expo-secure-store", { "faceIDPermission": "PainTrack uses Face ID to keep your health records private.", "configureAndroidBackup": true }],
+      ["expo-local-authentication", { "faceIDPermission": "PainTrack uses Face ID to keep your health records private." }],
+      "expo-notifications"
+    ]
+  }
+}

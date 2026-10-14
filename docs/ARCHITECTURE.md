@@ -32,7 +32,7 @@ single compromise exposes all of them.
 | Package | Purpose | Status |
 |---|---|---|
 | `packages/core` | Data model, validation, all cryptography | Started |
-| `apps/mobile` | Patient app (Expo / React Native, TypeScript) | Next |
+| `apps/mobile` | Patient app (Expo / React Native, TypeScript) | Local-only v1 |
 | `apps/server` | Accounts, encrypted sync, share storage | Planned |
 | `apps/viewer` | Clinician share viewer (static site) | Planned |
 
