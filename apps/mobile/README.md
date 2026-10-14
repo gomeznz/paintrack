@@ -39,8 +39,15 @@ pnpm install                     # from the repo root
 cd apps/mobile
 npx expo run:ios                 # needs a Mac with Xcode
 npx expo run:android             # needs Android Studio
-# or build in the cloud without Xcode/Android Studio:
-npx eas-cli@latest build --profile development --platform ios
+```
+
+Or build in Expo's cloud (EAS) with no Xcode or Android Studio, using the
+profiles in `eas.json`:
+
+```sh
+npx eas-cli@latest login                                        # free Expo account
+npx eas-cli@latest build --profile preview --platform android   # installable APK
+npx eas-cli@latest build --profile ios-simulator --platform ios # for the iOS Simulator on a Mac
 ```
 
 `ios.bundleIdentifier` and `android.package` in `app.json` are set to
